@@ -27,7 +27,7 @@ public class WebAppServerItemHandler {
     }
 
     public List<Consumable> addFoodItem(Food newFood) {
-        newFood.setID(nextId.incrementAndGet());
+        newFood.setID(nextId.getAndIncrement());
         if (!newFood.getName().isEmpty() && !newFood.getExpiryDate().toString().isEmpty()
                 && newFood.getPrice() >= 0
                 && newFood.getWeight()>= 0) {
@@ -37,7 +37,7 @@ public class WebAppServerItemHandler {
     }
 
     public List<Consumable> addDrinkItem(Drink newDrink) {
-        newDrink.setID(nextId.incrementAndGet());
+        newDrink.setID(nextId.getAndIncrement());
         if (!newDrink.getName().isEmpty()
                 && !newDrink.getExpiryDate().toString().isEmpty()
                 && newDrink.getPrice() >= 0
@@ -146,12 +146,13 @@ public class WebAppServerItemHandler {
             } else {
                 measurement = currentItem.get("volume").getAsDouble();
             }
-
+            long ID = currentItem.get("ID").getAsLong();
             //Format LocalDate expiryDate = LocalDateTime.parse(expiryDateString);
             DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             LocalDate expiryDate = LocalDate.parse(expiryDateString, dateFormat); //Formatting the date to the normal format
             //Create object based on type data
             Consumable newItem = consumableFactory.getConsumable(type, name, notes, price, measurement, expiryDate);
+            newItem.setID(ID);
             //Add to ArrayList
             itemList.add(newItem);
         }

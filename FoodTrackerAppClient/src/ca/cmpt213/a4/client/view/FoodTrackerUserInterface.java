@@ -183,13 +183,11 @@ public class FoodTrackerUserInterface extends JFrame implements ActionListener {
         else {
             //A constraint used to position panels
             GridBagConstraints gbc = new GridBagConstraints();
-
             //Index for the position
             int index = 0;
             for (Consumable currentItem : listOfItemToDisplay) {
                 //Save a copy of the current item to remove it if required
                 long ID = currentItem.getID();
-
                 //Storing fields and display it to the scroll panel
                 String type = currentItem.getType();
                 JPanel newPanel = new JPanel();
