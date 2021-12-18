@@ -1,0 +1,32 @@
+#Ping user
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/ping
+
+#List All
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listAll
+
+#List Expired
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpired
+
+#List Non-expired
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listNonExpired
+
+#List Expired in 7 days
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpiredIn7Days
+
+#Exit
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/exit
+
+#Add new food item
+curl -H "Content-Type: application/json" -X POST -d "{\"type\": \"food\", \"name\" : \"Eggs Benedict\", \"notes\" : \"eggs\", \"price\" : 5.0, \"expiryDate\" : \"2021-12-31\", \"info\" : 50.0 }" localhost:8080/addItem/food
+OR
+curl -H "Content-Type: application/json" -X POST -d "{"Your item here in JSON format" }" localhost:8080/addItem/food
+
+#Add new drink item
+curl -H "Content-Type: application/json" -X POST -d "{\"type\": \"drink\", \"name\" : \"Water\", \"notes\" : \"watah\", \"price\" : 5.0, \"expiryDate\" : \"2021-01-05\", \"info\" : 50.0 }" localhost:8080/addItem/drink
+OR
+curl -H "Content-Type: application/json" -X POST -d "{"Your item here in JSON format" }" localhost:8080/addItem/drink
+
+#Delete an item
+curl -H "Content-Type: application/json" -X POST -d "{\"itemID\" : 1.0 }" localhost:8080/removeItem
+OR
+curl -H "Content-Type: application/json" -X POST -d "{\"itemID\" : "Your desire ID"}" localhost:8080/removeItem

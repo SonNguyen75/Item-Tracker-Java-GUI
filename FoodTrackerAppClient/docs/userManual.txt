@@ -1,0 +1,29 @@
+User Manual:
+
+- To add an item:
+
+1) Press the button at the bottom of the application. It will prompt a dialog for user input
+
+2) Choose which type of consumable you want to choose from the drop down box with the label "Type". This will chage the field "Weight"
+or "Volume accordingly
+
+3) Enter the name of the item you want to enter. Note that it can not be empty
+
+4) Enter the notes of the item you want to enter. It can be empty
+
+5) Enter the price of the item you want to enter. 
+Note that it can not be negative, 0 or anything that is not an integer or double number digit
+
+6) Enter the weight or volume of the item you want to enter.
+Note that it can not be negative, 0 or anything that is not an integer or double number digit
+
+7) Choose expiry date from the date picker. Note it can not be empty
+
+8) Press "Add" to add the item or optionally "Cancel" to cancel the operation
+
+- To delete the item: Press the delete button with label "Delete" underneath each item
+
+- To see all the item currently stored, or which is expired, not expired, or expired in 7 days. Press the button accordingly at the top
+of the application
+
+Thank you for using our program
