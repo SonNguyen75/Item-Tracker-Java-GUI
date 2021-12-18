@@ -2,10 +2,9 @@
 A GUI Java app that can be used to track food and drink items through a Springboot server
 
 # Description
-- A GUI Java app created with Java Swing used to track items like food and drink. Basic fields of food and drink items like names, measurements, expiry date and price can be stored 
-using a server created with Springboot.
-- Data stored by the app will be automatically saved and loaded by the app.
-- User can track create a new item with a dialog, delete an item, or see which item is currently expired, not expired or almost expired. 
+- A GUI Java app created with Java Swing used to track items like food and drink. User can store basic fields of food and drink items like names, measurements, expiry date and price with a pop-up dialog. And data will be store using a local host server created with Springboot.
+- Data stored by the app will be automatically saved and loaded.
+- User can create a new item, delete an item, or track which item is currently expired, not expired or almost expired. 
 
 # Building
 1) Clone the repo
